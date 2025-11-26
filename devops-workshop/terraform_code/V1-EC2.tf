@@ -8,5 +8,4 @@ resource "aws_instance" "demo-server" {
       Name = "Demo-Server"
     }
     key_name = "dp-key"
-  
-}
+  }
