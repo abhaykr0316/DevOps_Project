@@ -4,9 +4,9 @@ provider "aws" {
 resource "aws_instance" "demo-server" {
     ami = "ami-0fa3fe0fa7920f68e"
     instance_type = "t3.micro"
-    security_groups = [ "demo-sg" ]
+    security_groups = ["demo-sg"]
     tags = {
-      Name = "Demo-Server"
+      Name = "demo-server"
     }
     key_name = "dp-key"
   }
@@ -34,7 +34,7 @@ resource "aws_security_group" "demo-sg" {
     cidr_blocks = ["0.0.0.0/0"]
    }
 
-   tags = {
+   tags_all = {
     Name = "demo-sg"
    }
 
